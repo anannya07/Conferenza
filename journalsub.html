@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Journal approval application</title>
+  <title>Submit your journal</title>
+  <style>
+    
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background:url('joournal.png');
+
+    }
+
+    .container {
+      width: 40%;
+      min-width: 900px;
+      height: auto;
+      margin: 10px auto 20px auto;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.537);
+      border-radius: 20px;
+      transition-duration: 70ms;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    .container:hover {
+      transition-duration: 70ms;
+      box-shadow: 0 8px 15px #000000df;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+
+
+    .yes-no {
+      display: flex;
+      align-items: baseline;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      /* margin-bottom: ; */
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      height: 5.5vh;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 20px;
+      /* margin: 10px auto; */
+    }
+
+    input[type="date"],
+    input[type="time"] {
+      font-size: 20px;
+      font-weight: 1%;
+      border: none;
+      width: 150px;
+      text-align: center;
+      padding: 5px;
+      border-radius: 4px;
+
+    }
+
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown select {
+      padding: 5px;
+      font-size: 20px;
+      width: 200px;
+      border: none;
+      border-radius: 4px;
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      background-color: #ffffff;
+      cursor: pointer;
+    }
+
+
+    .container form,
+    label {
+      color: #e7e9eb;
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+
+    .container h2 {
+      color: #dfe2e2;
+      font-size: 35px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      /* background-color: #159895; */
+      text-align: center;
+      border-radius: 10px;
+      padding: 5px;
+      width: auto;
+    }
+
+
+
+    input[type="text"]:hover,
+    input[type="email"]:hover,
+    input[type="date"]:hover,
+    input[type="time"]:hover,
+    textarea:hover,
+    option:hover,
+    select:hover {
+      box-shadow: 0 0.3px 2px #000;
+    }
+
+
+
+    #submit-button {
+      background-color: #159895;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 30px;
+    }
+
+    #submit-button:hover {
+      box-shadow: 0 2px 5px #000;
+    }
+
+
+    @media (max-width: 600px) {
+      .container {
+        max-width: 100%;
+      }
+    }
+
+
+
+    .dropdown::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      border-width: 6px 6px 0 6px;
+      border-style: solid;
+      border-color: #333 transparent transparent transparent;
+      pointer-events: none;
+    }
+
+    #back-button {
+      font-size: 20px;
+      background-color: #159895;
+      width: 150px;
+      height: 40px;
+      /* color: #fff; */
+      color: #fff;
+      font-weight: bold;
+      border: none;
+      box-shadow: 1px 2px 5px #002B5B inset;
+
+    }
+
+    #back-button:hover {
+      box-shadow: 1px 4px 10px #002B5B;
+
+    }
+
+    footer {
+      width: auto;
+      background-color: #ffffff54;
+      margin-top: 10px;
+      bottom: 0%;
+      text-align: center;
+      padding: 10px;
+      font-size: 20px;
+
+    }
+  </style>
+</head>
+<body></body>
+  <section class="container">
+    <h2>Journal submission form</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone:</label>
+        <input type="text" id="phone" placeholder="90xxxxxx12" name="phone" required>
+      </div>
+      <div class="form-group">
+        <label for="cname">Conference topic</label>
+      <div class="dropdown">
+        <select>
+          <option value="">Choose the corresponding conference</option>
+          <option value="option1">CyberTech Expo </option>
+          <option value="option2">Blockchain Tech Symposium
+        </option>
+          <option value="option3">RoboticsTech Expo</option>
+          <option value="option4">Big Data Expo</option>
+          <option value="option5">UX/UI Design Conference</option>
+          <option value="option6">DevConnect</option>
+        </select></div>
+      </div>
+      <div class="form-group">
+        <label for="cname">Conference speaker</label>
+      <div class="dropdown">
+        <select>
+          <option value="">Choose the corresponding speaker</option>
+          <option value="option1">Dr.Samartha Williams</option>
+          <option value="option2">Miss Arna Sarkar
+        </option>
+          <option value="option3">Mr.Tamaghna Das</option>
+          <option value="option4">Mr.Pabitra Das</option>
+          <option value="option5">Mr.Aditya Sen</option>
+          <option value="option6">Sorona Roy</option>
+        </select></div>
+      </div>
+      
+      <div class="form-group">
+        <label for="date">The Date of the conference:</label>
+        <input type="date" id="date" name="date" required>
+      </div>
+      <div class="form-group">
+        <label for="time">The Time of the conference:</label>
+        <input type="time" id="time" name="time" required>
+      </div>
+      <div class="form-group">
+        <label for="File">Add your file here:</label>
+        <input type="file" id="file" name="file" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" placeholder="Write your message here" name="message" rows="4" required></textarea>
+      </div>
+
+    <input type="submit" id="submit-button" value="Journal submission">
+    </form>
+  </section>
+  <center> <a href="home.html"><input type="submit" value="Back" id = "back-button"></a></center>                
+   
+</body>
+</html>
